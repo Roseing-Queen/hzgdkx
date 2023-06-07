@@ -1,0 +1,27 @@
+<h2>产品</h2>
+<div *ngFor="let product of products">
+  <h3>
+    <a [title]="product.name + 'detail'">
+      {{ product.name }}
+      ---{{ product.price }}---{{ product.description }}</a
+    >
+  </h3>
+  <h3 *ngIf="product.description">
+    {{ product.description }}
+  </h3>
+  <button type="button" (click)="share()">share</button>
+</div>
+<!-- 
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+     <a [title]="product.name + ' details'">
+      {{ product.name }}
+    </a>
+ -->
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
